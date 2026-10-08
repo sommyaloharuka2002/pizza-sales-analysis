@@ -10,7 +10,7 @@ This project analyzes restaurant order data to answer three questions:
 
 1. **Performance:** How much revenue is generated, which pizzas and categories lead, and how sales change over time?
 2. **Product:** Which pizza types, sizes, and categories drive sales and revenue?
-3. **Customer behavior:** Do ordering patterns differ by meal time and by day of the week, and are those differences statistically significant?
+3. **Customer Behaviour:** Do ordering patterns differ by meal time and by day of the week, and are those differences statistically significant?
 
 The work moves from raw data to a database, then to SQL analysis, statistical testing, and a final dashboard.
 
@@ -34,7 +34,11 @@ pizza-sales-sql-analysis/
 ├── chi_square_test.py             # Chi-square test: pizza category vs. day of week
 ├── pizza_sales report.pbix        # 3-page Power BI dashboard
 ├── .gitignore
-└── README.md
+├── README.md
+└── screenshots/                   # Power BI dashboard images
+    ├── performance_overview.png
+    ├── product_sales_analysis.png
+    └── consumer_behaviour_analysis.png
 ```
 
 ---
@@ -100,7 +104,11 @@ A three-page interactive report:
 
 1. **Performance Overview:** headline KPIs, revenue and order trends, and overall sales performance
 2. **Product Sales Analysis:** sales by pizza type, size, and category
-3. **Customer Behavioral Insights:** ordering patterns and statistical testing results
+3. **Customer Behaviour Analysis:** ordering patterns and statistical testing results
+
+![Performance Overview](screenshots/performance_overview.png)
+![Product Sales Analysis](screenshots/product_sales_analysis.png)
+![Customer Behaviour Analysis](screenshots/consumer_behaviour_analysis.png)
 
 ---
 
@@ -114,7 +122,7 @@ A three-page interactive report:
 
 **Statistical testing**
 - **Lunch vs. dinner basket size (t-test):** The difference is statistically significant (t = 11.96, p ≈ 7.9 × 10⁻³³ < 0.05). Lunch and dinner orders differ in average pizza quantity, so we reject the null hypothesis.
-- **Day of week vs. category preference (chi-square test):** No significant relationship was found (χ² = 15.82, df = 18, p = 0.605 > 0.05). Category preferences are consistent across the week, so we fail to reject the null hypothesis.
+- **Day of week vs. category preference (chi-square test):** No significant relationship was found (χ² = 15.82, df = 18, p = 0.605 > 0.05). The data does not provide evidence that category preferences depend on the day of the week, so we fail to reject the null hypothesis.
 
 ---
 
