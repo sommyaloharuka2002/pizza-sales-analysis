@@ -35,7 +35,7 @@ dinner_baskets = df_t[df_t['meal_time'] == 'Dinner']['order_quantity']
 
 t_stat, p_val_t = ttest_ind(lunch_baskets, dinner_baskets)
 
-print(f"T-Test Statistis Test : {t_stat:.4f}")
+print(f"T-Test Statistisc Test : {t_stat:.4f}")
 print(f"P-Value: {p_val_t}")
 
 alpha = 0.05

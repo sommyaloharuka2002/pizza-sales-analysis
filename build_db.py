@@ -47,10 +47,10 @@ FOREIGN KEY (pizza_id ) REFERENCES pizzas(pizza_id )
 
 conn.commit()
 
-pd.read_csv("orders.csv").to_sql("orders", conn, if_exists = 'append', index=False)
-pd.read_csv("pizza_types.csv", encoding= 'latin1').to_sql("pizza_types", conn, if_exists = 'append', index=False)
-pd.read_csv("pizzas.csv").to_sql("pizzas", conn, if_exists = 'append', index=False)
-pd.read_csv("order_details.csv").to_sql("order_details", conn, if_exists = 'append', index=False)
+pd.read_csv("datasets/orders.csv").to_sql("orders", conn, if_exists='append', index=False)
+pd.read_csv("datasets/pizza_types.csv", encoding='latin1').to_sql("pizza_types", conn, if_exists='append', index=False)
+pd.read_csv("datasets/pizzas.csv").to_sql("pizzas", conn, if_exists='append', index=False)
+pd.read_csv("datasets/order_details.csv").to_sql("order_details", conn, if_exists='append', index=False)
 
 conn.close()
-print("Databse built and loaded successfully.")
+print("Database built and loaded successfully.")
